@@ -1,4 +1,6 @@
 # HAS_통신/네트워크 위치추적 
+![HAS](https://user-images.githubusercontent.com/50609368/80461979-07006e80-8971-11ea-98ba-cf5fb42eaea1.png)
+
 ## 주제
 자동 측위 및 식별 시스템 기반의 실내 위치추적 기술 개발
 
