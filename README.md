@@ -1,4 +1,4 @@
-# HAS_통신/네트워크 위치추적 
+# HAS_Hide And Seek
 ![HAS_social](https://user-images.githubusercontent.com/50609368/80462249-65c5e800-8971-11ea-96d3-a71d8806b00d.png)
 
 ## 주제
