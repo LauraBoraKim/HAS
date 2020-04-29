@@ -31,7 +31,7 @@
 * 실내 공간 정보 검색, 실내 로봇 응용, 실내 공간 관리, 실내 공간 기반 게임 등 실내 환경에 다양한 서비스를 제공
 
 ## NS-3
-1.NS-3
+1.NS-3 설치 설명서
 > https://drive.google.com/file/d/115PVnxi2bxedmq_MLoXg6lGM1okgEvpK/view?usp=sharing
 2. 거리에 따른 RSS 수집
  * RPi 단말기가 동일한 tx power로 데이터/신호를 전송하도록 설정
