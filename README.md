@@ -28,6 +28,15 @@
 * 실내 공간 정보 검색, 실내 로봇 응용, 실내 공간 관리, 실내 공간 기반 게임 등 실내 환경에 다양한 서비스를 제공
 
 ## RS-3
+* RPi 단말기가 동일한 tx power로 데이터/신호를 전송하도록 설정
+* 수신 단말기에서 received signal strength (RSS, 수신 신호 세기)를 측정
+* 두 대의 RPi 장비는 일정간격으로(예: 1초) 상대방 단말기로 부터 전송한 신호의 RSS 신호를 저장하기 (파일로 저장) 
+* 두개의 RPi 장비간 거리가 멀어짐에 따라 RSS 값이 작아지는 것을 확인
+** 거리를 x축으로, 거리에 따른 RSS값을 y축으로 그래프 표현
+> dbm 단위 ![rssDistance(dbm)](https://user-images.githubusercontent.com/50609368/80571044-e00c7000-8a36-11ea-9c33-d71d04f412e4.PNG)
+> watt 단위 ![rssDistance(watt)](https://user-images.githubusercontent.com/50609368/80572171-c53afb00-8a38-11ea-914e-cb5d2567f4fc.PNG)
+
+
 
 
 ## RPi
