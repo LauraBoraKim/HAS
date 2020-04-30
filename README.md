@@ -31,7 +31,7 @@
 * 실내 공간 정보 검색, 실내 로봇 응용, 실내 공간 관리, 실내 공간 기반 게임 등 실내 환경에 다양한 서비스를 제공
 
 ## NS-3
-1.NS-3 설치 설명서
+1. NS-3 설치 설명서
 > https://drive.google.com/file/d/115PVnxi2bxedmq_MLoXg6lGM1okgEvpK/view?usp=sharing
 2. 거리에 따른 RSS 수집
  * RPi 단말기가 동일한 tx power로 데이터/신호를 전송하도록 설정
@@ -45,13 +45,14 @@
  * 사각형 영역. 각각의 모서리에 1개의 노드 배치. 화면 중앙에 노드 1개 배치
  * 5개의 노드가 모두 주기적으로 broadcasting
  * 하나의 노드가 broadcasting 하면, 다른 4개 노드는 해당 노드의 ID값 (id, ip, mac 등, 해당 노드를 유일하게 구분할 수 있는 어떤 데이터든 관계 없음) 및 RSS값을 log/trace에 기록
-4.  Scenario-2
+4. Scenario-2
  * 화면 중앙에 있는 노드를 이동, 이 외의 조건은 Scenario-1과 동일
 
 ## RPi
 * wavemon, iwconfig 등의 tool을 사용해서 RSS값 측정
 > https://drive.google.com/file/d/18h2EYKPiQfDfjL27Fy-pDv_DGVKYsRgQ/view?usp=sharing
 * 실내 환경에서 sender/receiver간 거리에 따른 RSS값 변화 측정
+![실내 RSS](https://user-images.githubusercontent.com/50609368/80684227-4f9a6200-8b00-11ea-9e3c-75a5e9999ed7.PNG)
 > https://drive.google.com/file/d/1dB44r0sZaxvjT3-pFy_2ttB63CJEOstQ/view?usp=sharing
 * 위치측정을 위해 RPi를 AP 모드로 변경
 > https://drive.google.com/file/d/1HiYkCAV3NG9jZy35zZtxu7XRE7Z6VtLh/view?usp=sharing
