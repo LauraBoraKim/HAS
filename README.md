@@ -49,7 +49,8 @@
 
 ## RPi
 * [wavemon, iwconfig 등의 tool을 사용해서 RSS값 측정](https://drive.google.com/file/d/18h2EYKPiQfDfjL27Fy-pDv_DGVKYsRgQ/view?usp=sharing)
-* [실내 환경에서 sender/receiver간 거리에 따른 RSS값 변화 측정](https://drive.google.com/file/d/1dB44r0sZaxvjT3-pFy_2ttB63CJEOstQ/view?usp=sharing)
+* ![거리에 따른 RSS값 변화 그래프](https://user-images.githubusercontent.com/50609368/85047878-676f9780-b1cd-11ea-8686-10469f88c880.PNG)
+)
 ![실내 RSS](https://user-images.githubusercontent.com/50609368/80684227-4f9a6200-8b00-11ea-9e3c-75a5e9999ed7.PNG)
 * [위치측정을 위해 RPi를 AP 모드로 변경](https://drive.google.com/file/d/1HiYkCAV3NG9jZy35zZtxu7XRE7Z6VtLh/view?usp=sharing)
 
