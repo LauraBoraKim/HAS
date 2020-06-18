@@ -28,7 +28,7 @@
 * 실내 공간 정보 검색, 실내 로봇 응용, 실내 공간 관리, 실내 공간 기반 게임 등 실내 환경에 다양한 서비스를 제공
 
 ## 프로그램 구성도
-![구성도](https://user-images.githubusercontent.com/50609368/85051035-f41c5480-b1d1-11ea-8872-4e49ee882dfe.PNG)
+![구성도2](https://user-images.githubusercontent.com/50609368/85051303-4fe6dd80-b1d2-11ea-944a-6064caf00d61.PNG)
 
 ## NS-3
 1. [NS-3 설치 설명서](https://drive.google.com/file/d/115PVnxi2bxedmq_MLoXg6lGM1okgEvpK/view?usp=sharing)
