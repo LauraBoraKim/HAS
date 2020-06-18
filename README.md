@@ -11,10 +11,10 @@
 
 ## 팀 구성
 * 지도교수 : 김태운 교수님
-* 홍연경 : 팀장/Raspberry Pi 실내 통신환경 구축 및 데이터 수집, 분석 
-* 김윤하 : 예산관리/Raspberry Pi 실내 통신환경 구축 및 데이터 수집, 분석 
-* 김진아 : NS-3 시뮬레이션 무선네트워크 환경 구축 및 데이터 수집, 분석
-* 김보라 : 깃헙관리/NS-3 시뮬레이션 무선네트워크 환경 구축 및 데이터 수집, 분석
+* 홍연경 : 팀장/Raspberry Pi 실내 통신환경 구축 / GUI 프로그램 구현 
+* 김윤하 : 예산관리/Raspberry Pi 실내 통신환경 구축 및 데이터 수집, 분석
+* 김진아 : NS-3 시뮬레이션 무선네트워크 환경 구축 및 데이터 수집, 분석 / fingerfrint 구현
+* 김보라 : 깃헙관리/NS-3 시뮬레이션 무선네트워크 환경 데이터 분석 / 삼변측량 구현
 
 ## 개발 목표
 * 복잡한 내부 구조 및 시설물로 인해 GPS 정확도가 현저히 떨어지는 실내 환경에서 높은 정확도의 측위 기술 및 객체(예: 사람, 사물 등) 인식 기술을 개발. 
@@ -24,7 +24,8 @@
  측위 및 객체 인식 결과를 결합하여, 객체의 동선을 실시간으로 추적하는 기술을 개발.
 
 ## 활용방안
-* 분야 가리지 않고 실내라면 어디든지 설치가 가능.
+* 구현한 공학관 위치추적 프로그램은 강의실 찾기 서비스 /전자출결 출석 후 수업 미참여(일명 출튀) 학생 구분 서비스 등에 활용 가능
+* 분야 가리지 않고 실내라면 어디든지 설치가 가능
 * gps를 이용한 건물 내의 길 찾기 서비스
 * 추적기를 이용한 현재 사용자의 위치추적
 * 건물 내의 비상구를 쉽게 알 수 있는 긴급구조용 위치 서비스
@@ -46,11 +47,13 @@
  * 하나의 노드가 broadcasting 하면, 다른 4개 노드는 해당 노드의 ID값 (id, ip, mac 등, 해당 노드를 유일하게 구분할 수 있는 어떤 데이터든 관계 없음) 및 RSS값을 log/trace에 기록
 4. Scenario-2
  * 화면 중앙에 있는 노드를 이동, 이 외의 조건은 Scenario-1과 동일
+5. 결과
+ * NS-3를 통해 fingerprint를 통한 위치 추적이 가능함을 확인
 
 ## RPi
 * [wavemon, iwconfig 등의 tool을 사용해서 RSS값 측정](https://drive.google.com/file/d/18h2EYKPiQfDfjL27Fy-pDv_DGVKYsRgQ/view?usp=sharing)
 * [실내 환경에서 sender/receiver간 거리에 따른 RSS값 변화 측정](https://drive.google.com/file/d/1dB44r0sZaxvjT3-pFy_2ttB63CJEOstQ/view?usp=sharing)
-* ![거리에 따른 RSS값 변화 그래프](https://user-images.githubusercontent.com/50609368/85047878-676f9780-b1cd-11ea-8686-10469f88c880.PNG)
+ ![거리에 따른 RSS값 변화 그래프](https://user-images.githubusercontent.com/50609368/85047878-676f9780-b1cd-11ea-8686-10469f88c880.PNG)
 * [위치측정을 위해 RPi를 AP 모드로 변경](https://drive.google.com/file/d/1HiYkCAV3NG9jZy35zZtxu7XRE7Z6VtLh/view?usp=sharing)
 
 ## 실내 위치 측정 기법
