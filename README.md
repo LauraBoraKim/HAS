@@ -65,6 +65,11 @@
  ## GUI 사용 공학관 map
 ![map](https://user-images.githubusercontent.com/50609368/85044706-f9c16c80-b1c8-11ea-8718-a4dd6d3eb750.png)
 
+## 결과
+* 어쩌구
+* 저쩌구
+* [시연 동영상](https://github.com/HAS-Hallym/HAS/blob/master/demo/readme.md)
+
 ## 사용환경
 ![개발도구](https://user-images.githubusercontent.com/50609368/85049672-fe3d5380-b1cf-11ea-8e1e-16ac164875c6.PNG)
  
