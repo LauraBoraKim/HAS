@@ -31,8 +31,7 @@
 * 실내 공간 정보 검색, 실내 로봇 응용, 실내 공간 관리, 실내 공간 기반 게임 등 실내 환경에 다양한 서비스를 제공
 
 ## NS-3
-1. NS-3 설치 설명서
-> https://drive.google.com/file/d/115PVnxi2bxedmq_MLoXg6lGM1okgEvpK/view?usp=sharing
+1. [NS-3 설치 설명서](https://drive.google.com/file/d/115PVnxi2bxedmq_MLoXg6lGM1okgEvpK/view?usp=sharing)
 2. 거리에 따른 RSS 수집
  * RPi 단말기가 동일한 tx power로 데이터/신호를 전송하도록 설정
  * 수신 단말기에서 received signal strength (RSS, 수신 신호 세기)를 측정
@@ -49,8 +48,7 @@
  * 화면 중앙에 있는 노드를 이동, 이 외의 조건은 Scenario-1과 동일
 
 ## RPi
-* wavemon, iwconfig 등의 tool을 사용해서 RSS값 측정
-> https://drive.google.com/file/d/18h2EYKPiQfDfjL27Fy-pDv_DGVKYsRgQ/view?usp=sharing
+* [wavemon, iwconfig 등의 tool을 사용해서 RSS값 측정](https://drive.google.com/file/d/18h2EYKPiQfDfjL27Fy-pDv_DGVKYsRgQ/view?usp=sharing)
 * 실내 환경에서 sender/receiver간 거리에 따른 RSS값 변화 측정
 ![실내 RSS](https://user-images.githubusercontent.com/50609368/80684227-4f9a6200-8b00-11ea-9e3c-75a5e9999ed7.PNG)
 > https://drive.google.com/file/d/1dB44r0sZaxvjT3-pFy_2ttB63CJEOstQ/view?usp=sharing
@@ -67,3 +65,14 @@
  ## GUI 사용 공학관 map
 ![map](https://user-images.githubusercontent.com/50609368/85044706-f9c16c80-b1c8-11ea-8718-a4dd6d3eb750.png)
  
+ ## 회의록
+ * [2020-1학기 캡스톤디자인 200317 회의록](https://drive.google.com/file/d/18ute8Sk0x_bHUOz7mdzSNhEgZ52nLWls/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200324 회의록](https://drive.google.com/file/d/1zDEydlisIfj0WCvA-W77H4ijMMDAw5e7/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200331 회의록](https://drive.google.com/file/d/15oF0xEkqqlKzznCChwq66feqiK9S26tS/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200407 회의록](https://drive.google.com/file/d/19yURt9eabhi2oRWYOXDplFDTgC1e-nip/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200414 회의록](https://drive.google.com/file/d/1tJ-4pPjRItMvVlCovkR7KeBeXz2obJSu/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200421 회의록](https://drive.google.com/file/d/1ahfUIlp6Wn95fFzrZXbw-HZ7V-MkfEwQ/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200428 회의록](https://drive.google.com/file/d/1PnQCxsvJLDd7R9Vzn6pvhagP0IxTOf-d/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200512 회의록](https://drive.google.com/file/d/1tFszON3l0FZqbq4PcgkeHNDcu8kwllhQ/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200519 회의록](https://drive.google.com/file/d/1prEXLQ_5slSAFTah8wYXbpZJWsySlt4y/view?usp=sharing)
+ * [2020-1학기 캡스톤디자인 200602 회의록](https://drive.google.com/file/d/1J-jgfdsKsWC9NX6BENrY0Ix8coHTf_yZ/view?usp=sharing)
