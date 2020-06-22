@@ -59,20 +59,54 @@
 * 삼변측량
 > 삼각측량과 이름이 비슷하지만, 삼각측량은 거리와 각도를 가지고 위치를 추적하고, 삼변측량은 거리만 가지고 위치 추적. 3개 이상의 신호발생기에서 발생하는 신호강도(rss)를 이용하여 각각의 신호발생기 교차범위의 위치가 사용자의 위치라는 이론. fingerprint에 비해 정확한 위치 측정 가능하지만, ap위치가 변하거나 지형지물에 따라 신호강도가 달라져 예외사항이 발생한다.
 
-* fingerprint
+* fingerprint (채택)
 > 사전에 격자형태로 신호세기를 저장한 뒤, 사용자가 자신주변의 신호를 모아 위치를 요청하면 서버는 기록된 신호세기와 요청 신호세기를 비교하여 위치를 측정하는 형태. fingerprint를 수행하기위해서는  사전수집단계, 측위단계 2단계 필요. 사전수집단계에서 데이터 미리 측정해야 한다는 점과 실내환경이 변경되면 전파맵의 보정이 필요하다는 점이 특징이다.
 
- ## GUI 사용 공학관 map
+## Radio map 확보
+* 테스트 공간이 되는 공학관 1층 실내 내부의 공간을 다수의 grid로 분할하고, 각 grid의 셀에서 측정한 ap들의 rss값을 저장하는 Radio Map을 확보한다.
+
+## AP 수집 단계
+* AP 수집 위치
+![캡처_1](https://user-images.githubusercontent.com/50609368/85251135-7a1af280-b493-11ea-81d6-15f2c8df5444.PNG)
+![캡처_2](https://user-images.githubusercontent.com/50609368/85251465-52785a00-b494-11ea-8883-4cb36956db99.PNG)
+![캡처_3](https://user-images.githubusercontent.com/50609368/85251469-55734a80-b494-11ea-9c81-2ad92f863935.PNG)
+* 라즈베리파이에서 ap를 수집할 위치를 고려하여 해당 위치에서 ap의 MAC address정보를 획득하여 파일 형태로 저장한다. 파일 중 한 개의 내부 상태는 다음과 같다.
+![noname01](https://user-images.githubusercontent.com/50609368/85251768-1c87a580-b495-11ea-816f-d53abb3e44d3.png)
+
+ ## 공학관 map
 ![map](https://user-images.githubusercontent.com/50609368/85044706-f9c16c80-b1c8-11ea-8718-a4dd6d3eb750.png)
+위의 맵을
+![캡처](https://user-images.githubusercontent.com/50609368/85251744-0d085c80-b495-11ea-844d-d0ab013feb69.PNG)
+로 나누었다.
+
+## 사전 작업 모드
+* 사용자 라즈베리파이는 특정 그리드에서 주변의 AP를 읽어 5번 서버에게 전송한다.
+* TYPE:그리드X좌표:그리드Y좌표:rss값... 형태로 서버에 전송을 하며 서버에서는 TYPE이 3이면 사전작업모드이고 해당 그리드 좌표에서 받은 5번의 데이터 중에서 middle값을 실제 라디오 맵으로 선택한다.
+ 서버가 받은 내용은 다음과 같다
+![2](https://user-images.githubusercontent.com/50609368/85251826-4b058080-b495-11ea-93e2-504e96c6f2d2.png)
+ - 그리드는 (1.0) ~ (28.0)으로 총 28개의 그리드로 나누었고 (28.0)에서 5번의 수집을 끝내면 편의성을 위해 파일로 저장시킨다.
+## 실시간 위치 측정
+* 사용자 라즈베리파이는 TYPE 1로 변경하여 서버에게 실시간으로 전송한다.
+* 서버로 TYPE이 1이므로 위치 측정을 위해 저장된 파일을 불러와 비교하며 해당 rss값과 모든 grid의 rss값을 비교하여 가장 작은 유클리디안 거리를 가지는 grid를 찾아낸다.
+* 서버는 해당 grid를 사용자의 위치라고 예측한다.
+* 라즈베리파이는 다음과 같이 iwlist를 이용하여 MAC Address와 RSS값을 찾는다.
+* 서버에게 보내는 형태는 다음과 같다
+![3](https://user-images.githubusercontent.com/50609368/85251883-7ab48880-b495-11ea-898b-da23785ee8f8.png)
+
+## GUI 표시
+* 사용자(라즈베리파이)로부터 받은 데이터(rss list)가 gird로 설정한 (16, 0)에서 가장 작은 값을 가지므로 사용자의 위치가 (16, 0) grid인 곳에 빨간색 점을 찍는다.
+* matplotlib.pyplot 모듈을 이용하여 GUI를 표시한다.
 
 ## 결과
-* 어쩌구
-* 저쩌구
+![4](https://user-images.githubusercontent.com/50609368/85252000-c830f580-b495-11ea-8eab-b1341542848c.png)
+![5](https://user-images.githubusercontent.com/50609368/85252015-cd8e4000-b495-11ea-854b-3fc3761a99a8.png)
 * [시연 동영상](https://github.com/HAS-Hallym/HAS/blob/master/demo/readme.md)
 
 ## 사용환경
 ![개발도구](https://user-images.githubusercontent.com/50609368/85049672-fe3d5380-b1cf-11ea-8e1e-16ac164875c6.PNG)
- 
+ ## 보고서
+ * [중간보고서](https://drive.google.com/file/d/1VsRK7m37Bnsv6UiBU8lafvF0x8dYB-8N/view?usp=sharing)
+ * [최종보고서](https://drive.google.com/file/d/1udCH78X7dxK6Rv0kyK5iUdToVNNfqvzD/view?usp=sharing)
  ## 회의록
  * [2020-1학기 캡스톤디자인 200317 회의록](https://drive.google.com/file/d/18ute8Sk0x_bHUOz7mdzSNhEgZ52nLWls/view?usp=sharing)
  * [2020-1학기 캡스톤디자인 200324 회의록](https://drive.google.com/file/d/1zDEydlisIfj0WCvA-W77H4ijMMDAw5e7/view?usp=sharing)
